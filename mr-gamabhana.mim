@@ -1,0 +1,333 @@
+;; mr-gamabhana.mim -- Marathi input method with GaMaBhaNa
+;; This file is part of the m17n database; a sub-part of the m17n
+;; library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+(input-method mr gamabhana)
+
+(description "Based on Hindi input method by ITRANS and Harvard-Kyoto
+transliteration systems.
+You can use all the standard ITRANS key sequences plus key
+sequences such as the below.
+
+  nk->ङ्क्, nkh->ङ्ख्, ng->ङ्ग्, ngh->ङ्घ्
+  nch->ञ्च्, nCh->ञ्छ्, nc->ञ्च्, nC->ञ्छ्, nchh->ञ्छ्,
+  nj->ञ्ज्, njh->ञ्झ्, nT->ण्ट्, nTh->ण्ठ्, nD->ण्ड्, nDh->ण्ढ्
+  c->च्, C->छ्, z->श्, S->ष्, jn->ज्ञ्, R->ऋ
+
+In addition, for convenience, when a consonant + halant sequence
+is followed by non Devanagari letter, the last halant is removed.
+For instance, 'k SPC'->'क ', 'k..'->'क।'.
+
+The motivation behind additions made to the basic ITRANS scheme
+is described in http://sanskritnlp.appspot.com/optitrans.html,
+along with a tabulated comparison with several other
+transliteration schemes.
+
+Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
+
+(title "क")
+
+(variable
+ (trim-last-halant
+  (_"If this variable is 1 (the default), the last Halant in a syllable
+is removed if it is followed by non Devanagari letter.  For instance,
+typing \"har..\" produces \"हर।\", not \"हर्।\".")
+  1 0 1))
+
+(map
+ (starter
+  (".") ("~") ("#") ("$") ("*") ("]") ((S-\ )) ((C-@))
+  ("0") ("1") ("2") ("3") ("4") ("5") ("6") ("7") ("8") ("9")
+  ("A") ("C") ("D") ("E") ("G") ("H") ("I") ("J") ("K") ("L")
+  ("M") ("N") ("O") ("R") ("S") ("T") ("U") ("Y")
+  ("a") ("b") ("c") ("d") ("e") ("f") ("g") ("h") ("i")
+  ("j") ("k") ("l") ("m") ("n") ("o") ("p") ("q") ("r")
+  ("s") ("t") ("u") ("v") ("w") ("x") ("y") ("z")
+  ((KP_1)) ((KP_2)) ((KP_3)) ((KP_4)) ((KP_5))
+  ((KP_6)) ((KP_7)) ((KP_8)) ((KP_9)) ((KP_0)))
+
+ (consonant
+  ("k" "क्")
+  ("kh" "ख्")
+  ("K" "ख्")
+  ("g" "ग्")
+  ("gh" "घ्")
+  ("G" "घ्")
+  (".k" "क़् ")
+  ("q" "क़्")
+  (".kh" "ख़्")
+  (".K" "ख़्")
+  (".g" "ग़्")
+  ("nk" "ङ्क्")
+  ("nx" "ङ्क्ष्")
+  ("nkh" "ङ्ख्")
+  ("nK" "ङ्ख्")
+  ("ng" "ङ्ग्")
+  ("ngh" "ङ्घ्")
+  ("nG" "ङ्घ्")
+  ("~N" "ङ्")
+  ("N^" "ङ्")
+  ("NG" "ङ्")
+  ("ch" "च्")
+  ("Ch" "छ्")			      ; not in ITRANS Devenagari table
+  ("c" "च्")
+  ("C" "छ्")			      ; not in ITRANS Devenagari table
+  ("chh" "छ्")
+  ("j" "ज्")
+  ("jh" "झ्")
+  ("J" "झ्")
+  ("nch" "ञ्च्")
+  ("nCh" "ञ्छ्")			      ; not in ITRANS Devenagari table
+  ("nc" "ञ्च्")
+  ("nC" "ञ्छ्")			      ; not in ITRANS Devenagari table
+  ("nchh" "ञ्छ्")
+  ("nj" "ञ्ज्")
+  ("njh" "ञ्झ्")
+  ("nJ" "ञ्झ्")
+  ("~n" "ञ्")
+  ("JN" "ञ्")
+  ("NY" "ञ्")
+  ("T" "ट्")
+  ("Th" "ठ्")
+  ("D" "ड्")
+  ("Dh" "ढ्")
+  (".D" "ड़्")
+  (".Dh" "ढ़्")
+  ("nT" "ण्ट्")
+  ("nTh" "ण्ठ्")
+  ("nD" "ण्ड्")
+  ("nDh" "ण्ढ्")
+  ("N" "ण्")
+  ("t" "त्")
+  ("th" "थ्")
+  ("d" "द्")
+  ("dh" "ध्")
+  ("n" "न्")
+  (":n" "ऩ्")			      ; not in ITRANS Devenagari table
+  ("p" "प्")
+  ("ph" "फ्")
+  ("P" "फ्")
+  (".ph" "फ़्")
+  ("f" "फ्")
+  ("b" "ब्")
+  ("bh" "भ्")
+  ("B" "भ्")
+  ("m" "म्")
+  ("y" "य्")
+  ("Y" "य़्")            ; not in ITRANS Devanagari table
+  ("yh" "य़्")           ; not in ITRANS Devanagari table
+  (".y" "य़्")
+  ("r" "र्")
+  ("l" "ल्")
+  ("L" "ळ्")
+  ("ld" "ळ्")
+  ("v" "व्")
+  ("w" "व्")
+  ("sh" "श्")
+  ("z" "ज़्")
+  (".j" "ज़्")
+;  ("z" "श्")
+  ("S" "ष्")
+  ("Sh" "ष्")
+  ("shh" "ष्")
+  ("s" "स्")
+  ("h" "ह्")
+  ("jn" "ज्ञ्")
+  ("j~n" "ज्ञ्")
+  ("jn" "ज्ञ्")
+  ("GY" "ज्ञ्")
+  ("Gy" "ज्ञ्")
+  ("dny" "ज्ञ्")		      ; not in ITRANS Devanagari table
+  ("x" "क्ष्")
+  ("ks" "क्स्")
+  ("ksh" "क्ष्")
+  ("gH"  ॻ्)
+  ("jH"  ॼ्)
+  ("DH"  "ॾ्")
+  ("Ry" "ऱ्य्")
+  ("Rh" "ऱ्ह्") 
+  ("dhd" "द्ध्")
+  ("vd" "द्व्")
+  ("kn" "क्न्") 
+  ("gn" "ग्‍न्") 
+  ("ghn" "घ्‍न्") 
+  ("tn" "त्‍न्") 
+  ("dn" "द्‍न्") 
+  ("nn" "न्‍न्") 
+  ("pn" "प्‍न्") 
+  ("mn" "म्‍न्") 
+  ("sn" "स्‍न्") 
+  ("shn" "श्‍न्") 
+  ("bH"  "ॿ्"))
+
+ (independent
+  ("a" "अ")
+  ("aa" "आ")
+  ("A" "आ")
+  ("i" "इ")
+  ("ii" "ई")
+  ("I" "ई")
+  ("u" "उ")
+  ("uu" "ऊ")
+  ("U" "ऊ")
+  ("RU" "ऋ")
+  ("Ri" "ऋ")
+  ("RI" "ॠ") 
+  ("O" "ऑ")     
+  ("E" "ॲ")
+  ("RRi" "ऋ")
+  ("R^i" "ऋ")
+  ("LLi" "ऌ")			      ; not in ITRANS Devanagari table
+  ("L^i" "ऌ")			      ; not in ITRANS Devanagari table
+  (".c" "ऍ")            ; not in ITRANS Devanagari table
+  ("ea" "ऍ")            ; not in ITRANS Devanagari table
+  ("ee" (set CANDRA-E-O 0) "ई")       ; not in ITRANS Devanagari table
+  ("e" (set CANDRA-E-O ?ऍ) "ए")
+  ("ai" "ऐ")
+  ("oo" (set CANDRA-E-O 0) "ऊ") 
+  ("o" (set CANDRA-E-O ?ऑ) "ओ")
+  ("oa" "ऑ")
+  ("au" "औ")
+  ("ou" "औ")
+  ("RRI" "ॠ")			      ; not in ITRANS Devanagari table
+  ("RR" "ॠ")			      ; not in ITRANS Devanagari table
+  ("R^I" "ॠ")			      ; not in ITRANS Devanagari table
+  ("LLI" "ॡ")			      ; not in ITRANS Devanagari table
+  ("L^I" "ॡ")			      ; not in ITRANS Devanagari table
+  (".N" "ँ")
+  (".n" "ं")
+  ("M" "ं")
+  ("H" "ः")
+  ("kH" "ᳵ") 
+  ("pH" "ᳶ")
+  (".a" "ऽ")
+  (".h" "्")
+  ("AUM" "ॐ")
+  ("OM" "ॐ")
+  ("$" "र्")			      ; not in ITRANS Devanagari table
+  ((S-\ ) "‌")			      ; not in ITRANS Devanagari table
+  ((C-@) "‍"))			      ; not in ITRANS Devanagari table
+
+ (digit
+  ("0" "०")
+  ("1" "१")
+  ("2" "२")
+  ("3" "३")
+  ("4" "४")
+  ("5" "५")
+  ("6" "६")
+  ("7" "७")
+  ("8" "८")
+  ("9" "९")
+  ((KP_0) "०")
+  ((KP_1) "१")
+  ((KP_2) "२")
+  ((KP_3) "३")
+  ((KP_4) "४")
+  ((KP_5) "५")
+  ((KP_6) "६")
+  ((KP_7) "७")
+  ((KP_8) "८")
+  ((KP_9) "९"))
+
+ (dependent
+  ("O" (delete @-) "ॉ")    
+  ("E" (delete @-) "ॅ")
+  ("a" (delete @-) "")
+  ("aa" (delete @-) "ा")
+  ("A" (delete @-) "ा")
+  ("i" (delete @-) "ि")
+  ("ii" (delete @-) "ी")
+  ("I" (delete @-) "ी")
+  ("u" (delete @-) "ु")
+  ("uu" (delete @-) "ू")
+  ("U" (delete @-) "ू")
+  ("R" (delete @-) "ृ")
+  ("RRi" (delete @-) "ृ")
+  ("R^i" (delete @-) "ृ")
+  ("LLi" (delete @-) "ॢ")	      ; not in ITRANS Devanagari table
+  ("L^i" (delete @-) "ॢ")	      ; not in ITRANS Devanagari table
+  (".c" (delete @-) "ॅ")        ; not in ITRANS Devanagari table
+  ("ea" (delete @-) "ॅ")        ; not in ITRANS Devanagari table
+  ("ee" (delete @-) (set CANDRA-E-O 0) "ी") ; not in ITRANS Devanagari table
+  ("e" (delete @-) (set CANDRA-E-O ?ॅ) "े")
+  ("ai" (delete @-) "ै")
+  ("oo" (delete @-) (set CANDRA-E-O 0) "ू") 
+  ("o" (delete @-) (set CANDRA-E-O ?ॉ) "ो")
+  ("oa" "ॉ")
+  ("au" (delete @-) "ौ")
+  ("ou" (delete @-) "ौ")
+  ("RR" (delete @-) "ॄ")	      ; not in ITRANS Devanagari table
+  ("RRI" (delete @-) "ॄ")	      ; not in ITRANS Devanagari table
+  ("R^I" (delete @-) "ॄ")	      ; not in ITRANS Devanagari table
+  ("LLI" (delete @-) "ॣ")	      ; not in ITRANS Devanagari table
+  ("L^I" (delete @-) "ॣ"))	      ; not in ITRANS Devanagari table
+
+ (dot
+  ("." (set DOT 1) "."))
+
+ (eo-dot-c
+  (".c" (delete @-) (insert CANDRA-E-O)))
+
+ (commit-key
+  ((S-C-Return)))
+
+ (backspace
+  ((BackSpace) (undo))))
+
+(state
+ (init
+  (starter (pushback 1) (shift intermediate)))
+
+ (intermediate
+  ;; CANDRA-E-O is set to the character CANDRA E or CANDRA O when "e"
+  ;; or "o" is typed, and in that case, if ".c" is typed, the
+  ;; character set to CANDRA-E-O is inserted.
+  (t (set CANDRA-E-O 0))
+  ;; LAST-HALANT-POS is set to the position after a consonat + HALANT
+  ;; sequence.  If the following key is for non-letter, that HALANT
+  ;; character is removed.
+  (consonant (mark LAST-HALANT-POS) (shift second))
+  (independent (cond (CANDRA-E-O (shift after-eo)) (1 (shift init))))
+  (digit (shift init))
+  (backspace)
+  (commit-key (shift init)))
+
+ (second
+  ;; CANDRA-E-O is set to the character CANDRA E or CANDRA O when "e"
+  ;; or "o" is typed, and in that case, if ".c" is typed, the
+  ;; character set to CANDRA-E-O is inserted.
+  (t (set CANDRA-E-O 0))
+  (consonant (mark LAST-HALANT-POS))
+  (dependent (cond (CANDRA-E-O (shift after-eo)) (1 (shift init))))
+  (backspace)
+  (commit-key (shift init))
+  (nil (cond (trim-last-halant (move LAST-HALANT-POS) (delete @-) (move @>)))
+       (shift init)))
+
+ (after-eo
+  (t (set DOT 0))
+  (dot)
+  (eo-dot-c (shift init))
+  (commit-key (shift init))
+  (nil (cond (DOT (delete @-) (pushback 1))) (shift init))))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: emacs-lisp
+;; End:
