@@ -1,5 +1,5 @@
 # marathi keyboard for Ubuntu
-# Instructions to install gamabhana keyboard into ibus...
+## Instructions to install gamabhana keyboard into ibus...
 
 mkdir gamabhana
 mkdir gamabhana/DEBIAN
