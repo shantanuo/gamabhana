@@ -1,0 +1,13 @@
+Source: gamabhana
+Maintainer: Shantanu Oak <shantanu.oak@gmail.com>
+Section: utils
+Standards-Version: 4.4.0
+Build-depends: debhelper (>=9.0)
+Homepage: https://github.com/shantanuo/gamabhana
+Priority: optional
+
+Package: gamabhana
+Architecture: all
+Depends: ibus, ibus-m17n, ibus-gtk
+Section: utils
+Description: Marathi keyboard for ibus
