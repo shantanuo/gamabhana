@@ -8,6 +8,6 @@ Priority: optional
 
 Package: gamabhana
 Architecture: all
-Depends: ibus
+Depends: ibus, ibus-m17n, ibus-gtk
 Section: utils
 Description: Marathi keyboard for ibus
