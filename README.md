@@ -5,3 +5,5 @@ sudo add-apt-repository ppa:gamabhana-team/gamabhana
 sudo apt-get update
 
 sudo apt install gamabhana
+
+More info: https://www.maayboli.com/node/51711
