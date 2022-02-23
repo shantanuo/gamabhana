@@ -8,6 +8,7 @@ sudo apt install gamabhana
 
 More info: https://www.maayboli.com/node/51711
 
+## how to install
 Select the keyboard:
 
 From settings - keyboard - Input Sources - Install GaMaBHaNa keyboard from Marathi language
