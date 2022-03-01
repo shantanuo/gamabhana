@@ -11,8 +11,8 @@ More info: https://www.maayboli.com/node/51711
 ## how to install
 Select the keyboard:
 
-From settings - keyboard - Input Sources - Install GaMaBHaNa keyboard from Marathi language
+From settings - keyboard - Input Sources - Install gamabhana keyboard from Marathi language
 
-On some versions of Ubuntu, you may need to select it from Regions option:
+If the langauge Marathi is not available in the list, you may need to select it from Regions option:
 
 From settings - Regions and Language - Install Marathi
