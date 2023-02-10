@@ -6,10 +6,10 @@ sudo apt-get update
 
 sudo apt install gamabhana
 
-# If you do not need fonts package:
+### If you do not need fonts package:
 sudo apt install --no-install-recommends gamabhana
 
-# Remove both:
+### Remove both:
 sudo apt remove gamabhana gamabhana-fonts
 
 More info: https://www.maayboli.com/node/51711
