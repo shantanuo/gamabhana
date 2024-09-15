@@ -206,7 +206,7 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("o" (delete @-) (set CANDRA-E-O ?ॉ) "ो")
   ("oa" "ॉ")
   ("au" (delete @-) "ौ")
-  ("ou" (delete @-) "ौ")
+  ("ou" (delete @-) "ौ"))
 
  (dot
   ("." (set DOT 1) "."))
