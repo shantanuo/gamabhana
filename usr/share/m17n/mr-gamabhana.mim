@@ -147,17 +147,16 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("u" "उ")
   ("uu" "ऊ")
   ("U" "ऊ")
-  ("Ru" "ऋ")
-  ("RU" "ऋ")
-  ("Ri" "ऋ")
-  ("RI" "ॠ") 
+  ("Ru" "ृ")
+  ("RU" "ृ")
+  ("Ri" "ृ")
+  ("RI" "ऋ") 
   ("O" "ऑ")     
   ("E" "ॲ")
   ("RRi" "ऋ")
   ("R^i" "ऋ")
-  ("LLi" "ऌ")			      ; not in ITRANS Devanagari table
-  ("L^i" "ऌ")			      ; not in ITRANS Devanagari table
-  (".c" "ऍ")            ; not in ITRANS Devanagari table
+  ("klRu" "क्लृ")
+  (".c" "च़") 
   ("ea" "ऍ")            ; not in ITRANS Devanagari table
   ("ee" (set CANDRA-E-O 0) "ई")       ; not in ITRANS Devanagari table
   ("e" (set CANDRA-E-O ?ऍ) "ए")
@@ -167,11 +166,7 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("oa" "ऑ")
   ("au" "औ")
   ("ou" "औ")
-  ("RRI" "ॠ")			      ; not in ITRANS Devanagari table
-  ("RR" "ॠ")			      ; not in ITRANS Devanagari table
-  ("R^I" "ॠ")			      ; not in ITRANS Devanagari table
-  ("LLI" "ॡ")			      ; not in ITRANS Devanagari table
-  ("L^I" "ॡ")			      ; not in ITRANS Devanagari table
+
   (".N" "ँ")
   (".n" "ं")
   ("M" "ं")
@@ -182,7 +177,6 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   (".h" "्")
   ("AUM" "ॐ")
   ("OM" "ॐ")
-  ("$" "र्")			      ; not in ITRANS Devanagari table
   ((S-\ ) "‌")			      ; not in ITRANS Devanagari table
   ((C-@) "‍"))			      ; not in ITRANS Devanagari table
 
@@ -221,11 +215,6 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("uu" (delete @-) "ू")
   ("U" (delete @-) "ू")
   ("R" (delete @-) "ृ")
-  ("RRi" (delete @-) "ृ")
-  ("R^i" (delete @-) "ृ")
-  ("LLi" (delete @-) "ॢ")	      ; not in ITRANS Devanagari table
-  ("L^i" (delete @-) "ॢ")	      ; not in ITRANS Devanagari table
-  (".c" (delete @-) "ॅ")        ; not in ITRANS Devanagari table
   ("ea" (delete @-) "ॅ")        ; not in ITRANS Devanagari table
   ("ee" (delete @-) (set CANDRA-E-O 0) "ी") ; not in ITRANS Devanagari table
   ("e" (delete @-) (set CANDRA-E-O ?ॅ) "े")
@@ -235,11 +224,6 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("oa" "ॉ")
   ("au" (delete @-) "ौ")
   ("ou" (delete @-) "ौ")
-  ("RR" (delete @-) "ॄ")	      ; not in ITRANS Devanagari table
-  ("RRI" (delete @-) "ॄ")	      ; not in ITRANS Devanagari table
-  ("R^I" (delete @-) "ॄ")	      ; not in ITRANS Devanagari table
-  ("LLI" (delete @-) "ॣ")	      ; not in ITRANS Devanagari table
-  ("L^I" (delete @-) "ॣ"))	      ; not in ITRANS Devanagari table
 
  (dot
   ("." (set DOT 1) "."))
