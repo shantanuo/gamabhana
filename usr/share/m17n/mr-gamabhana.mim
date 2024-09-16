@@ -205,7 +205,8 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("oa" (delete @-) "ॉ")
   ("OM" (delete @-) "ाँ")
   ("au" (delete @-) "ौ")
-  ("ou" (delete @-) "ौ"))
+  ("ou" (delete @-) "ौ")
+  ("q" (delete @-) "़"))
 
  (dot
   ("." (set DOT 1) "."))
