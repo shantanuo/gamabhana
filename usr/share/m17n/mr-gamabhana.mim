@@ -19,9 +19,7 @@
 
 (input-method mr gamabhana)
 
-(description "Based on Hindi input method by ITRANS and Harvard-Kyoto
-transliteration systems.
-Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
+(description "Based on Hindi input method by ITRANS and Harvard-Kyoto")
 
 (title "ग")
 
