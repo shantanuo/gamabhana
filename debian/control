@@ -9,6 +9,6 @@ Priority: optional
 Package: gamabhana
 Architecture: all
 Depends: ibus, ibus-m17n, ibus-gtk
-Recommends: gamabhana-fonts
+Recommends: gamabhana-fonts, ibus-typing-booster
 Section: utils
 Description: Marathi keyboard for ibus
