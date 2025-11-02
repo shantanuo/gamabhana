@@ -8,7 +8,7 @@ Priority: optional
 
 Package: gamabhana
 Architecture: all
-Depends: ibus, ibus-m17n, ibus-gtk
+Depends: ibus, ibus-m17n, ibus-gtk, m17n-db
 Recommends: gamabhana-fonts, ibus-typing-booster
 Replaces: hunspell-hi, ibus-typing-booster
 Section: utils
