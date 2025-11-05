@@ -1,20 +1,32 @@
-# More than 50 fonts included with easy marathi keyboard for Ubuntu
+# More than 50 fonts included with easy marathi keyboards for Ubuntu
 
+A) Install 2 keyboard layouts - GaMaBhaNa and KrutiDev
+
+B) Install more than 50 fonts - like Shobhika Regular and Shobhika Bold
+
+C) Install Typing booster - for predictive word suggestions
+
+D) Install ibus package - required for typing any non-english language
+
+## Install
 sudo add-apt-repository ppa:gamabhana-team/gamabhana
 
 sudo apt-get update
 
 sudo apt install gamabhana
 
-### If you do not need fonts package:
+### If you do not need fonts package and typing booster:
 sudo apt install --no-install-recommends gamabhana
 
-### Remove both:
-sudo apt remove gamabhana gamabhana-fonts
+### Remove all:
+sudo apt remove gamabhana gamabhana-fonts ibus-typing-booster
 
-More info: https://www.maayboli.com/node/51711
+### More info and support: 
 
-## how to install
+https://www.maayboli.com/node/51711
+
+## how to configure:
+
 Select the keyboard:
 
 From settings - keyboard - Input Sources - Install gamabhana keyboard from Marathi language
@@ -22,3 +34,20 @@ From settings - keyboard - Input Sources - Install gamabhana keyboard from Marat
 If the langauge Marathi is not available in the list, you may need to select it from Regions option:
 
 From settings - Regions and Language - Install Marathi
+
+_____
+
+# Typing Booster
+
+ibus-typing-booster will also be installed. Typing Booster is a software for Linux users that helps you type faster using predictive text selection.
+
+https://mike-fabian.github.io/ibus-typing-booster/
+
+Spell check and typing booster works for the following 11 languages:
+
+Assamese, Bengali, Gujarati, Hindi, Kannada, Marathi, Nepali, Odia, Punjabi, Tamil, Telugu
+
+For e.g. In this image Gujarati words are auto-suggested based on what you have already typed:
+
+<img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/gujarati_booster.png">
+
