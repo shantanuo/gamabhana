@@ -51,3 +51,8 @@ For e.g. In this image Gujarati words are auto-suggested based on what you have 
 
 <img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/gujarati_booster.png">
 
+_____
+
+Youtube tutorial about how to configure GaMaBhaNa on Ubuntu
+
+https://www.youtube.com/watch?v=sTygHz1mabQ
