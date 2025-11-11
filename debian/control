@@ -10,6 +10,6 @@ Package: gamabhana
 Architecture: all
 Depends: ibus, ibus-m17n, ibus-gtk, m17n-db
 Recommends: gamabhana-fonts, ibus-typing-booster
-Replaces: hunspell-hi, ibus-typing-booster
+Replaces: hunspell-hi, ibus-typing-booster, m17n-db
 Section: utils
 Description: Marathi keyboard for ibus
