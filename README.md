@@ -56,3 +56,5 @@ _____
 Youtube tutorial about how to configure GaMaBhaNa on Ubuntu
 
 https://www.youtube.com/watch?v=sTygHz1mabQ
+
+<img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/gamabhana_multi.png">
