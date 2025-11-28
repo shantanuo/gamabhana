@@ -1,12 +1,14 @@
-# More than 50 fonts included with easy marathi keyboards for Ubuntu
+# More than 50 fonts included, predictive typing for 11 Indian Lanauges and easy marathi keyboards for Linux users
 
 A) Install 2 keyboard layouts - GaMaBhaNa and KrutiDev
 
 B) Install more than 50 fonts - like Shobhika Regular and Shobhika Bold
 
-C) Install Typing booster - for predictive word suggestions
+C) Install Typing booster - predictive word suggestions for 11 Indian languages
 
-D) Install ibus package - required for typing any non-english language
+D) Install Spell Checker - for 11 Indian languages like Hindi, Marathi, Bengali, Gujarati etc.
+
+E) Install ibus package - required for typing in any non-english language
 
 ## Install
 sudo add-apt-repository ppa:gamabhana-team/gamabhana
@@ -21,9 +23,6 @@ sudo apt install --no-install-recommends gamabhana
 ### Remove all:
 sudo apt remove gamabhana gamabhana-fonts ibus-typing-booster
 
-### More info and support: 
-
-https://www.maayboli.com/node/51711
 
 ## how to configure:
 
@@ -35,6 +34,14 @@ If the langauge Marathi is not available in the list, you may need to select it 
 
 From settings - Regions and Language - Install Marathi
 
+### Youtube tutorial about how to configure GaMaBhaNa on Ubuntu
+
+https://www.youtube.com/watch?v=sTygHz1mabQ
+
+_____
+
+
+
 _____
 
 # Typing Booster
@@ -43,18 +50,14 @@ ibus-typing-booster will also be installed. Typing Booster is a software for Lin
 
 https://mike-fabian.github.io/ibus-typing-booster/
 
-Spell check and typing booster works for the following 11 languages:
-
-Assamese, Bengali, Gujarati, Hindi, Kannada, Marathi, Nepali, Odia, Punjabi, Tamil, Telugu
-
 For e.g. In this image Gujarati words are auto-suggested based on what you have already typed:
 
 <img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/gujarati_booster.png">
 
 _____
 
-Youtube tutorial about how to configure GaMaBhaNa on Ubuntu
+Spell check and typing booster works for the following 11 languages:
 
-https://www.youtube.com/watch?v=sTygHz1mabQ
+Assamese, Bengali, Gujarati, Hindi, Kannada, Marathi, Nepali, Odia, Punjabi, Tamil, Telugu
 
 <img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/gamabhana_multi.png">
