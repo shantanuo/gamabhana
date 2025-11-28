@@ -6,7 +6,7 @@ B) Install more than 50 fonts - like Shobhika Regular and Shobhika Bold
 
 C) Install Typing booster - predictive word suggestions for 11 Indian languages
 
-D) Install Spell Checker - for 11 Indian languages like Hindi, Marathi, Bengali, Gujarati etc.
+D) Install Libreoffice Spell Checker - for 11 Indian languages like Hindi, Marathi, Bengali, Gujarati etc.
 
 E) Install ibus package - required for typing in any non-english language
 
