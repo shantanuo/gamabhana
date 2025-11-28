@@ -51,6 +51,11 @@ For e.g. In this image Gujarati words are auto-suggested based on what you have 
 
 <img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/gujarati_booster.png">
 
+
+Bengali Spell checker screenshot:
+
+<img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/bengali_spell_check.png">
+
 _____
 
 Spell check and typing booster works for the following 11 languages:
