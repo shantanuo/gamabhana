@@ -1,4 +1,4 @@
-# More than 50 fonts included, predictive typing for 11 Indian Lanauges and easy marathi keyboards for Linux users
+# More than 50 fonts included, predictive typing for 11 Indian Lanauges with spell check and easy marathi keyboards for Linux users
 
 A) Install 2 keyboard layouts - GaMaBhaNa and KrutiDev
 
