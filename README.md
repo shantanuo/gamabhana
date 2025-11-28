@@ -41,9 +41,6 @@ https://www.youtube.com/watch?v=sTygHz1mabQ
 _____
 
 
-
-_____
-
 # Typing Booster
 
 ibus-typing-booster will also be installed. Typing Booster is a software for Linux users that helps you type faster using predictive text selection.
