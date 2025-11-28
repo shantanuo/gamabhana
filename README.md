@@ -34,7 +34,7 @@ If the langauge Marathi is not available in the list, you may need to select it 
 
 From settings - Regions and Language - Install Marathi
 
-### Youtube tutorial about how to configure GaMaBhaNa on Ubuntu
+### Youtube tutorial 
 
 https://www.youtube.com/watch?v=sTygHz1mabQ
 
