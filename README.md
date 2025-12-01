@@ -58,6 +58,14 @@ Bengali Spell checker screenshot:
 
 _____
 
+Make sure that this option is enabled:
+
+Tools - Options - Languages and Locales - General - Complex Text layout
+
+<img src="https://kagapa.s3.ap-south-1.amazonaws.com/spellcheck/app/complex_text.png">
+
+_____
+
 Spell check and typing booster works for the following 11 languages:
 
 Assamese, Bengali, Gujarati, Hindi, Kannada, Marathi, Nepali, Odia, Punjabi, Tamil, Telugu
