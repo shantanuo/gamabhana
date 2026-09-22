@@ -1,0 +1,35 @@
+name: Build .deb
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y debhelper build-essential
+
+      - name: Build the .deb package
+        run: |
+          dpkg-buildpackage -us -uc -b --no-sign
+          mkdir -p artifacts
+          mv ../*.deb ../*.buildinfo artifacts/
+
+      - name: Inspect built package
+        run: dpkg-deb --info artifacts/*.deb
+
+      - name: Upload .deb as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gamabhana-deb
+          path: artifacts/*.deb
